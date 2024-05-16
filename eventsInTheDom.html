@@ -68,7 +68,6 @@
                 }
             }
         }
-
     </script>
 </head>
 <body>
@@ -76,6 +75,12 @@
         <h1 class="mainResult">1000</h1>
         <h1 class="mainResult">-1000</h1>
         <h1 class="mainResult">A name - not a number</h1>
+        <button id="btnInversion">Invert colors</button>
     </main>
+    <script>
+        const btn = document.getElementById("btnInversion");
+        btn.onclick = invertColorsOfResults;
+
+    </script>
 </body>
 </html>
