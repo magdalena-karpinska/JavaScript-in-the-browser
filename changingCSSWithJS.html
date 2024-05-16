@@ -29,7 +29,7 @@
         function addStyleBasedOfContent(element, content) {
             const convertedNumber = Number(content);
 
-            if (Number.isNan(convertedNumber)) {
+            if (Number.isNaN(convertedNumber)) {
                 return;
             }
 
@@ -39,6 +39,18 @@
             }
             element.classList.add("positiveResult");
         }
+
+        function addResultStyling() {
+            const mainResultElements = document.querySelectorAll(".mainResult");
+
+            for(let i = 0; i < mainResultElements.length; i++) {
+                const content = mainResultElements[i].textContent;
+
+                addStyleBasedOfContent(mainResultElements[i], content);
+            }
+        }
+
+        addResultStyling();
 
     </script>
 </body>
