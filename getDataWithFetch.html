@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Getting Data with Fetch</title>
     <script>
-        function getUsers() {
+        function getUsers(element) {
             fetch("https://randomuser.me/api/?gender=female&results=30")
             .then((response) => response.json())
             .then((data) => {
@@ -37,7 +37,7 @@
             const mainElement = document.querySelector("main");
             getUsers(mainElement);
 
-            const searchBtn = document.getElementbyId("btnSearch");
+            const searchBtn = document.getElementById("btnSearch");
             const searchInput = document.getElementById("searchInput");
 
             searchBtn.onclick = () => {
@@ -52,7 +52,7 @@
 
                     if (userName.includes(searchValueCI)) {
                         userDiv.style.display = "block";
-                        userDiv.style.backgroundColor = "light pink";
+                        userDiv.style.backgroundColor = "lightpink";
                     } else {
                         userDiv.style.display = "none";
                     }
